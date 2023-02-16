@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <style>
+        body {
+              background-color: #b6a1be;
+              text-align: center;
+            }
+        .images {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 50%;
+            }
+    </style>
+</head>
+<body>
+    {%for datas in data %}
+    <div class="title" style="text-align: center; color:  #24152e;">
+        <h1>{{datas.title}}</h1>
+    </div>
+    
+    <div class="description">
+        <p>{{datas.content}}</p>
+    </div>
+    <br>
+    <div class="images">
+        <img src="{{datas.image.url}}" alt="عکس">
+    </div>
+    
+    <div class="author">
+         <h4>{{datas.author}}</h4>
+    </div>
+   
+    <div class="views-and-data">
+        <small>views :{{datas.views}}</small>
+        <br>
+        <small>{{datas.date_created}}</small>
+    </div>
+    
+
+
+    {%endfor%}
+
+
+</body>
+</html>
